@@ -85,12 +85,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 <label for="palicis" class="krasina2">dienas : ))</label>
             </form>
                 <script>
-                    var sodiena = new Date();
-                    var gads = document.getElementById("gads");
-                    var menesis = document.getElementById("menesis");
-                    var diena = document.getElementById("diena");
-                    function dienas(){                  
+                    
+                    function dienas(){
+                        var sodiena = new Date();
+                        var gads = document.getElementById("gads");
+                        var menesis = document.getElementById("menesis") - 1;
+                        var diena = document.getElementById("diena");
+                        var dzimene = new Date(gads, menesis, diena);
+                        dzimene.setFullYear(sodiena.getFullYear() + 1);
+                        var atskiriba = dzimene - sodiena;
+                        var palicis = Math.ceil(atskiriba / (1000 * 3600 * 24));
                         document.getElementById("palicis").value = palicis;
+                        
                     }
                 </script>
             </div>
