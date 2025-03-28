@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Kas tev garšo?</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{background-color:#26819c}
+            .centyer{text-align: center;}
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .topnav {
+                overflow: hidden;
+                background-color: #006e6e;
+            }
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .topnav a:hover {
+                background-color: #FFFFFF;
+                color: black;
+            }
+            .topnav a.active {
+                background-color: #FFD700;
+                color: white;
+            }
+            form { margin: 100px auto; }
+        </style>
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Sākumlapa</a>
+            <a href="otrais.html">Mans temats</a>
+            <a href="forma.html">Gribi padzerties?</a>
+            <a href="SKOLA.html">SKOLA</a>
+        </div>
+        <form class="centyer">
+                <input type = "radio" id="sula" name="dzeriens" value="3.50€">
+                <label for="sula">Sula</label><br>
+                <input type = "radio" id="water" name="dzeriens" value="0.69€">
+                <label for="water">Ūdens</label><br>
+                <input type = "radio" id="cola" name="dzeriens" value="5.00€">
+                <label for="cola">Sula</label><br>
+                <input type="radio" id="fanta" name="dzeriens" value="4.67€">
+                <label for="fanta">Fanta</label><br>
+                <input type="radio" id="sprite" name="dzeriens" value="3.93€">
+                <label for="sprite">Sprite</label><br><br>
+                <input type="button" value="Cik tas maksā??" onclick="garso.value=dzeriens.value"><br><br>
+                <input name="garso">
+            </form>
+    </body>
+</html>
