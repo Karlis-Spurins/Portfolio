@@ -70,6 +70,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         </div>
             <h1 style = "color:#8F00FF;">Gaidot dzimšanas dienu...</h1>
             <hr>
-            <form>
+            <div class="krasina2">
+            <form id="forma2" class="krasina2">
+                <label for="forma2" class="krasina2">Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</label><br><br>
+                <label for="gads" class="krasina2">Gads</label>               
+                <input type="text" id="gads"><br><br>
+                <label for="menesis" class="krasina2">Mēnesis</label>
+                <input type="text" id="menesis"><br><br>
+                <label for="diena" class="krasina2">Diena</label>
+                <input type="text" id="diena"><br><br>
+                <input type="button" id="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="dienas()"><br><br>
+                <label for="palicis" class="krasina2">Līdz svētkiem atlikušas</label>
+                <input type="text" id="palicis">
+                <label for="palicis" class="krasina2">dienas : ))</label>
+            </form>
+                <script>
+                    var sodiena = new Date();
+                    var gads = document.getElementById("gads");
+                    var menesis = document.getElementById("menesis");
+                    var diena = document.getElementById("diena");
+                    function dienas(){                  
+                        document.getElementById("palicis").value = palicis;
+                    }
+                </script>
+            </div>
     </body>
 </html>
