@@ -82,7 +82,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         </div>
         <h1 style = "color:#8F00FF;">Gaidot dzimšanas dienu...</h1>
         <hr>
-        <div class="krasina2">
             <form id="forma2" class="krasina2">
                 <label for="forma2" class="krasina2">Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</label><br><br>
                 <label for="gads" class="krasina2">Gads</label>               
@@ -101,20 +100,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 function dienas() {
                     
                     const sodiena = new Date();
-                    const gads = document.getElementById("gads");
+                    const gads = document.getElementById("gads").value;
 
-                    const menesis = document.getElementById("menesis");
- 
-                    const diena = document.getElementById("diena");
+                    const menesis = document.getElementById("menesis").value - 1;
+  
+                    const diena = document.getElementById("diena").value;
 
                     const dzimene = new Date(gads, menesis, diena);
-                    dzimene.setFullYear(sodiena.getFullYear());
                     const atskiriba = dzimene - sodiena;
                     const palicis = Math.ceil(atskiriba / (1000 * 3600 * 24));
-                    document.getElementById("palicis").value = atskiriba;
+                    document.getElementById("palicis").value = palicis;
 
                 }
             </script>
-        </div>
     </body>
 </html>
