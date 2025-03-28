@@ -5,21 +5,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 -->
 <html>
     <head>
-        <title>Kas tev garšo?</title>
+        <title>Dzimšanas dienas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            body{background-color:#26819c}
-            h1 {
+        h1 {
                 font-size: 90px;
-                color:#8F00FF;
+            }
+            h2 {
+                color: #ADD8E6;
+                text-align: center;
+                font-size: 50px;
+            }
+            body{background-color:#26819c}
+            .centyer{text-align: center;}
+            .krasina{color: #ADD8E6}
+            .krasina2{color:#FFFFFF}
+            .back{background-color:#FFFFFF;}
+            body{
                 text-align:center;
+                
             }
             .inline{
-                display: inline-block;
+                display:inline-block;
                 text-align:left;
             }
-            .centyer{text-align:center;}
             body {
                 margin: 0;
                 font-family: Arial, Helvetica, sans-serif;
@@ -45,8 +55,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 background-color: #FFD700;
                 color: white;
             }
-            form { margin: 100px auto; }
-        </style>
+            hr{color:#000000}
+            </style>
     </head>
     <body>
         <div class="topnav" id="myTopnav">
@@ -58,22 +68,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <a href="dzd.html">Dzimšanas dienas</a>
             <a href="mervienibas.html">MĒRVIENĪBAS</a>            
         </div>
-        <h1>Laipni lūgti manā bārā!</h1>
-        <div class="centyer">
-            <form class="inline">
-                <input type = "radio" id="sula" name="dzeriens" value="3.50€">
-                <label for="sula">Sula</label><br>
-                <input type = "radio" id="water" name="dzeriens" value="0.69€">
-                <label for="water">Ūdens</label><br>
-                <input type = "radio" id="cola" name="dzeriens" value="5.00€">
-                <label for="cola">Sula</label><br>
-                <input type="radio" id="fanta" name="dzeriens" value="4.67€">
-                <label for="fanta">Fanta</label><br>
-                <input type="radio" id="sprite" name="dzeriens" value="3.93€">
-                <label for="sprite">Sprite</label><br><br>
-                <input type="button" value="Cik tas maksā??" onclick="garso.value=dzeriens.value"><br><br>
-                <input name="garso">
-            </form>
-        </div>
+            <h1 style = "color:#8F00FF;">Gaidot dzimšanas dienu...</h1>
+            <hr>
+            <form>
     </body>
 </html>
