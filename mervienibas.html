@@ -9,20 +9,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            h1 {
-                font-size: 90px;
-            }
             h2 {
                 color: #ADD8E6;
                 text-align: center;
                 font-size: 50px;
             }
-            body{background-color:#26819c}
-            .centyer{text-align: center;}
-            .krasina{color: #ADD8E6}
-            .krasina2{color:#FFFFFF}
-            .back{background-color:#FFFFFF;}
-            body{text-align:center;}
+            body{
+                background-image: url("images/cipari.jpg");
+                background-size: 5%;
+            }
+            .centyer{
+                text-align: center;
+            }
+            .krasina{
+                color: #ADD8E6
+            }
+            .krasina2{
+                color:#FFFFFF
+            }
+            .back{
+                background-color:#FFFFFF;
+            }
             .inline{
                 display:inline-block;
                 text-align:left;
@@ -52,6 +59,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 background-color: #FFD700;
                 color: white;
             }
+            form{
+                background-color:#DCDC00;
+                font-size: 20px;
+            }
         </style>
     </head>
     <body>
@@ -64,5 +75,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <a href="dzd.html">Dzimšanas dienas</a>
             <a href="mervienibas.html">MĒRVIENĪBAS</a>            
         </div>
+        <h1>Informācijas daudzuma mērvienības</h1>
+        <form>
+            <input type="number" id="ieliktuve">
+            <label for="ieliktuve">GB=</label><br><br>
+            <input type="button" value="Izteikt megabaitos" onclick="mega()">
+            <input type="text" id="pirma_vertiba" disabled>
+            <label for="pirma_vertiba">MB</label><br><br>
+            <input type="button" value="Izteikt mibibaitos" onclick="mibi()">
+            <input type="text" id="otra_vertiba" disabled>
+            <label for="otra_vertiba">MiB</label>
+        </form>
+        <script>
+            function mega(){
+                
+                var ievade = document.getElementById("ieliktuve").InnerHTML;
+                var izvade = ievade * 1000;
+                document.getElementById("pirma_vertiba").value = izvade;
+                
+            }
+            function mibi(){
+                var ievade = document.getElementById('ieliktuve').InnerHTML;
+                var izvade = ievade * 953.674;
+                document.getElementById('otra_vertiba').value = izvade;
+                
+            }
+        </script>
     </body>
 </html>

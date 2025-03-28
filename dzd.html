@@ -9,7 +9,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-        h1 {
+            h1 {
                 font-size: 90px;
             }
             h2 {
@@ -17,14 +17,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 text-align: center;
                 font-size: 50px;
             }
-            body{background-color:#26819c}
-            .centyer{text-align: center;}
-            .krasina{color: #ADD8E6}
-            .krasina2{color:#FFFFFF}
-            .back{background-color:#FFFFFF;}
+            body{
+                background-color:#26819c
+            }
+            .centyer{
+                text-align: center;
+            }
+            .krasina{
+                color: #ADD8E6
+            }
+            .krasina2{
+                color:#FFFFFF
+            }
+            .back{
+                background-color:#FFFFFF;
+            }
             body{
                 text-align:center;
-                
+
             }
             .inline{
                 display:inline-block;
@@ -55,8 +65,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 background-color: #FFD700;
                 color: white;
             }
-            hr{color:#000000}
-            </style>
+            hr{
+                color:#000000
+            }
+        </style>
     </head>
     <body>
         <div class="topnav" id="myTopnav">
@@ -68,37 +80,41 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <a href="dzd.html">Dzimšanas dienas</a>
             <a href="mervienibas.html">MĒRVIENĪBAS</a>            
         </div>
-            <h1 style = "color:#8F00FF;">Gaidot dzimšanas dienu...</h1>
-            <hr>
-            <div class="krasina2">
+        <h1 style = "color:#8F00FF;">Gaidot dzimšanas dienu...</h1>
+        <hr>
+        <div class="krasina2">
             <form id="forma2" class="krasina2">
                 <label for="forma2" class="krasina2">Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</label><br><br>
                 <label for="gads" class="krasina2">Gads</label>               
-                <input type="text" id="gads"><br><br>
+                <input type="number" id="gads"><br><br>
                 <label for="menesis" class="krasina2">Mēnesis</label>
-                <input type="text" id="menesis"><br><br>
+                <input type="number" id="menesis"><br><br>
                 <label for="diena" class="krasina2">Diena</label>
-                <input type="text" id="diena"><br><br>
+                <input type="number" id="diena"><br><br>
                 <input type="button" id="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="dienas()"><br><br>
                 <label for="palicis" class="krasina2">Līdz svētkiem atlikušas</label>
-                <input type="text" id="palicis">
+                <input type="text" id="palicis" disabled>
                 <label for="palicis" class="krasina2">dienas : ))</label>
             </form>
-                <script>
+            <script>
+
+                function dienas() {
                     
-                    function dienas(){
-                        var sodiena = new Date();
-                        var gads = document.getElementById("gads");
-                        var menesis = document.getElementById("menesis") - 1;
-                        var diena = document.getElementById("diena");
-                        var dzimene = new Date(gads, menesis, diena);
-                        dzimene.setFullYear(sodiena.getFullYear() + 1);
-                        var atskiriba = dzimene - sodiena;
-                        var palicis = Math.ceil(atskiriba / (1000 * 3600 * 24));
-                        document.getElementById("palicis").value = palicis;
-                        
-                    }
-                </script>
-            </div>
+                    const sodiena = new Date();
+                    const gads = document.getElementById("gads");
+
+                    const menesis = document.getElementById("menesis");
+ 
+                    const diena = document.getElementById("diena");
+
+                    const dzimene = new Date(gads, menesis, diena);
+                    dzimene.setFullYear(sodiena.getFullYear());
+                    const atskiriba = dzimene - sodiena;
+                    const palicis = Math.ceil(atskiriba / (1000 * 3600 * 24));
+                    document.getElementById("palicis").value = atskiriba;
+
+                }
+            </script>
+        </div>
     </body>
 </html>
