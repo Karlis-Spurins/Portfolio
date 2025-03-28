@@ -5,21 +5,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 -->
 <html>
     <head>
-        <title>Kas tev garšo?</title>
+        <title>Autora sadaļa</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <style>
-            body{background-color:#26819c}
             h1 {
                 font-size: 90px;
-                color:#8F00FF;
-                text-align:center;
             }
+            h2 {
+                color: #ADD8E6;
+                text-align: center;
+                font-size: 50px;
+            }
+            body{background-color:#26819c}
+            .centyer{text-align: center;}
+            .krasina{color: #ADD8E6}
+            .krasina2{color:#FFFFFF}
+            .back{background-color:#FFFFFF;}
+            body{text-align:center;}
             .inline{
-                display: inline-block;
+                display:inline-block;
                 text-align:left;
             }
-            .centyer{text-align:center;}
             body {
                 margin: 0;
                 font-family: Arial, Helvetica, sans-serif;
@@ -44,8 +52,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             .topnav a.active {
                 background-color: #FFD700;
                 color: white;
-            }
-            form { margin: 100px auto; }
+            }                      
         </style>
     </head>
     <body>
@@ -54,24 +61,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <a href="otrais.html">Mans temats</a>
             <a href="forma.html">Gribi padzerties?</a>
             <a href="SKOLA.html">SKOLA</a>
-            <a href="about.html">Par autoru</a>            
+            <a href="about.html">Par autoru</a>
         </div>
-        <h1>Laipni lūgti manā bārā!</h1>
-        <div class="centyer">
-            <form class="inline">
-                <input type = "radio" id="sula" name="dzeriens" value="3.50€">
-                <label for="sula">Sula</label><br>
-                <input type = "radio" id="water" name="dzeriens" value="0.69€">
-                <label for="water">Ūdens</label><br>
-                <input type = "radio" id="cola" name="dzeriens" value="5.00€">
-                <label for="cola">Sula</label><br>
-                <input type="radio" id="fanta" name="dzeriens" value="4.67€">
-                <label for="fanta">Fanta</label><br>
-                <input type="radio" id="sprite" name="dzeriens" value="3.93€">
-                <label for="sprite">Sprite</label><br><br>
-                <input type="button" value="Cik tas maksā??" onclick="garso.value=dzeriens.value"><br><br>
-                <input name="garso">
-            </form>
-        </div>
+        <h1 style = "color:#8F00FF;">Par autoru</h1>
+        <h2>Īsa informācija par mani</h2>
+        <b>
+            <ul class="inline">
+                <li>Vārds - Kārlis Spuriņš</li>
+                <li>Skola - skatīt sadaļu 'SKOLA'</li>
+                <li>Vecums - 17 gadi</li>
+                <li>Mīļākais mācīnu priekšmets - ķīmija</li>
+            </ul>
+        </b>
+        <h2>Kā var mani sasniegt?</h2>
+        <b>
+            <ul class="inline7">
+                <li>Epasts - karlis.spurins08@gmail.com</li>
+                <li>Telefons - +371 29 383 600</li>
+                
+            </ul>
+        </b>
     </body>
 </html>
